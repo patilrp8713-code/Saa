@@ -6,35 +6,57 @@
 
     <style>
         body {
-            background-color: #0d0d0d;
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-            height: 100vh;
             margin: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a); /* subtle background */
+            font-family: Arial, Helvetica, sans-serif;
         }
 
+        /* Letter / paper container */
         .container {
-            max-width: 650px;
-            padding: 20px;
+            max-width: 680px;
+            padding: 40px 35px;
+            background: #fdf6e3; /* paper color */
+            border-radius: 14px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+            text-align: center;
+            position: relative;
+        }
+
+        /* Light paper lines effect */
+        .container::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.03),
+                rgba(0,0,0,0.03) 1px,
+                transparent 1px,
+                transparent 28px
+            );
+            border-radius: 14px;
+            pointer-events: none;
         }
 
         h1 {
-            color: #ff4d6d;
+            color: #b03060;
             margin-bottom: 20px;
         }
 
         p {
             font-size: 18px;
-            line-height: 1.7;
+            line-height: 1.8;
             margin-bottom: 30px;
+            color: #333;
         }
 
         h2 {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            color: #444;
         }
 
         .buttons {
@@ -71,12 +93,12 @@
 
     <p>
         From the day you came into my life, everything felt more beautiful.
-        Your smile, your care, your presence — everything means the world to me🌏❤️.
-        I can't imagine my life without you. Tu ahes mhanun me ahe 
+        Your smile, your care, your presence — everything means the world to me 🌏❤️.
+        I can't imagine my life without you. Tu ahes mhanun me ahe.
         Tuzyashivay me kharach 0 ahe. Tuzyakt khup jast jiv ahe maza.
-        Khup jats bhariyes tu gampuda.
+        Khup jast bhariyes tu gampuda.
         <br><br>
-        <strong>Gampudi Kharach tuzyashivay kon nahi maz hya jagat</strong>
+        Gampudi Kharach tuzyashivay kon nahi maz hya jagat
     </p>
 
     <h2>मी तुझ्यासाठी तुझं सगळं काही आहे?</h2>
@@ -93,7 +115,6 @@
     noBtn.addEventListener("mouseover", () => {
         const x = Math.random() * 300 - 150;
         const y = Math.random() * 120 - 60;
-
         noBtn.style.transform = `translate(${x}px, ${y}px)`;
     });
 
@@ -104,8 +125,8 @@
                 display:flex;
                 justify-content:center;
                 align-items:center;
-                background:#0d0d0d;
-                color:#ff4d6d;
+                background:linear-gradient(135deg,#1a1a1a,#2a2a2a);
+                color:#ff6f91;
                 text-align:center;
                 font-family:Arial;
             ">
