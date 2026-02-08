@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For You ❤️</title>
+
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 650px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ff4d6d;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+        }
+
+        .buttons {
+            position: relative;
+            height: 120px;
+        }
+
+        button {
+            padding: 12px 28px;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        #yesBtn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+            left: 180px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Hey Love ❤️</h1>
+
+    <p>
+        From the day you came into my life, everything felt more beautiful.
+        Your smile, your care, your presence — everything means the world to me🌏❤️.
+        I can't imagine my life without you. Tu ahes mhanun me ahe 
+        Tuzyashivay me kharach 0 ahe. Tuzyakt khup jast jiv ahe maza.
+        Khup jats bhariyes tu gampuda.
+        <br><br>
+        <strong>Gampudi Kharach tuzyashivay kon nahi maz hya jagat</strong>
+    </p>
+
+    <h2>मी तुझ्यासाठी तुझं सगळं काही आहे?</h2>
+
+    <div class="buttons">
+        <button id="yesBtn" onclick="yesClicked()">YES 💖</button>
+        <button id="noBtn">NO 😜</button>
+    </div>
+</div>
+
+<script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+        const x = Math.random() * 300 - 150;
+        const y = Math.random() * 120 - 60;
+
+        noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    function yesClicked() {
+        document.body.innerHTML = `
+            <div style="
+                height:100vh;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                background:#0d0d0d;
+                color:#ff4d6d;
+                text-align:center;
+                font-family:Arial;
+            ">
+                <h1>
+                    I knew it! 😍❤️<br><br>
+                    I love you forever 💖
+                </h1>
+            </div>
+        `;
+    }
+</script>
+
+</body>
+</html>
